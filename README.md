@@ -53,31 +53,31 @@ A fast, modern .NET 8 WPF application for viewing and editing DICOM medical imag
 
 ```
 DicomEditor/
-??? Core/                    # Base classes and utilities
-?   ??? ViewModelBase.cs     # MVVM base class
-?   ??? Result.cs            # Operation result pattern
-?   ??? AsyncRelayCommand.cs # Async command implementation
-??? Models/                  # Data models
-?   ??? DicomFileItem.cs     # DICOM file representation
-?   ??? DicomTagItem.cs      # DICOM tag representation
-?   ??? EditActions.cs       # Undo/redo action definitions
-?   ??? SupportingModels.cs  # Filter options, settings, etc.
-??? Services/                # Business logic services
-?   ??? Interfaces/          # Service contracts
-?   ??? DicomFileService.cs  # File loading/saving
-?   ??? DicomTagService.cs   # Tag extraction/modification
-?   ??? DicomValidationService.cs # VR validation
-?   ??? UndoRedoService.cs   # Undo/redo management
-?   ??? SettingsService.cs   # App settings persistence
-?   ??? DialogService.cs     # UI dialogs
-??? ViewModels/              # MVVM ViewModels
-?   ??? MainViewModel.cs     # Main window logic
-?   ??? TagEditorViewModel.cs # Tag editing logic
-??? Controls/                # Custom WPF controls
-?   ??? InputDialog.xaml     # Input dialog control
-??? Resources/               # Icons and assets
-??? App.xaml                 # Application entry
-??? MainWindow.xaml          # Main window UI
+   Core/                        # Base classes and utilities
+      ViewModelBase.cs          # MVVM base class
+      Result.cs                 # Operation result pattern
+      AsyncRelayCommand.cs      # Async command implementation
+   Models/                      # Data models
+      DicomFileItem.cs          # DICOM file representation
+      DicomTagItem.cs           # DICOM tag representation
+      EditActions.cs            # Undo/redo action definitions
+      SupportingModels.cs       # Filter options, settings, etc.
+   Services/                    # Business logic services
+      Interfaces                # Service contracts
+      DicomFileService.cs       # File loading/saving
+      DicomTagService.cs        # Tag extraction/modification
+      DicomValidationService.cs # VR validation
+      UndoRedoService.cs        # Undo/redo management
+      SettingsService.cs        # App settings persistence
+      DialogService.cs          # UI dialogs
+   ViewModels/                  # MVVM ViewModels
+      MainViewModel.cs          # Main window logic
+      TagEditorViewModel.cs     # Tag editing logic
+   Controls/                    # Custom WPF controls
+      InputDialog.xaml          # Input dialog control
+   Resources/                   # Icons and assets
+   App.xaml                     # Application entry
+   MainWindow.xaml              # Main window UI
 ```
 
 ## Getting Started
@@ -114,8 +114,8 @@ DicomEditor/
 
 | Action | Method |
 |--------|--------|
-| Open files | **File ? Open Files...** or `Ctrl+O` |
-| Open folder | **File ? Open Folder...** or `Ctrl+Shift+O` |
+| Open files | **File -> Open Files...** or `Ctrl+O` |
+| Open folder | **File -> Open Folder...** or `Ctrl+Shift+O` |
 | Drag & drop | Drag files/folders onto the window |
 
 ### Editing Tags
@@ -147,14 +147,14 @@ DicomEditor/
 ### Bulk Operations
 
 1. Select the tag you want to modify
-2. Use **Edit ? Apply Value to All Files...** (`Ctrl+Shift+A`) to set the same value across all loaded files
-3. Use **Edit ? Delete Tag from All Files...** (`Ctrl+Shift+D`) to remove a tag from all files
+2. Use **Edit -> Apply Value to All Files...** (`Ctrl+Shift+A`) to set the same value across all loaded files
+3. Use **Edit -> Delete Tag from All Files...** (`Ctrl+Shift+D`) to remove a tag from all files
 
 ### Saving Changes
 
 - Modified files are highlighted in orange
-- Use **File ? Save** (`Ctrl+S`) to save the selected file
-- Use **File ? Save All Modified** (`Ctrl+Shift+S`) to save all changes
+- Use **File -> Save** (`Ctrl+S`) to save the selected file
+- Use **File -> Save All Modified** (`Ctrl+Shift+S`) to save all changes
 - Backups are automatically created (configurable in settings)
 
 ## Configuration
@@ -186,10 +186,6 @@ Logs are written to:
 3. Commit your changes (`git commit -m 'Add amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
-
-## License
-
-Copyright © Siemens Healthineers AG, 2025. All rights reserved.
 
 ## Acknowledgments
 
